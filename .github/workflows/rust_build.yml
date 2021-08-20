@@ -9,6 +9,8 @@ on:
 
 jobs:
   plugin:
+    env:
+      PLUGIN_NAME: results_screen
     runs-on: ubuntu-latest
     container: 
       image: jugeeya/cargo-skyline:2.1.0
@@ -23,7 +25,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: plugin
-        path: target/aarch64-skyline-switch/release/libnn_hid_hook.nro
+        path: target/aarch64-skyline-switch/release/lib${{env.PLUGIN_NAME}}.nro
   upload:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
@@ -44,4 +46,4 @@ jobs:
         body: >
           Beta built off of the latest code in the repository. 
         files: >
-          plugin/libnn_hid_hook.nro
+          plugin/*
