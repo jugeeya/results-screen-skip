@@ -2,6 +2,7 @@
 
 use skyline::{hook, install_hook};
 use skyline::nn::hid::NpadHandheldState;
+use skyline::nn::ro::LookupSymbol;
 
 use smash::app::{self, lua_bind::*};
 
