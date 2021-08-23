@@ -19,7 +19,8 @@ pub fn handle_get_npad_state_start(
             let actual_state = *state;
             let update_count = (*state).updateCount;
             // 0: A, 2: X (Right Joycon), 12: LeftDpad (Left Joycon)
-            let key_a: u64 = 0b0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0001_0000_0000_0101;
+            // TODO: Above^, should we support separate joycons? 
+            let key_a: u64 = 0b0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0001;
             let key_start: u64 = 0b0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0100_0000_0000;
             if (actual_state.Buttons & key_start) != 0 {
                 SHOULD_END_RESULT_SCREEN = true;
