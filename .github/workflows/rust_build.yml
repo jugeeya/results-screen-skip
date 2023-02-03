@@ -13,12 +13,11 @@ jobs:
       PLUGIN_NAME: results_screen
     runs-on: ubuntu-latest
     container: 
-      image: jugeeya/cargo-skyline:2.1.0
+      image: jugeeya/cargo-skyline:3.2.0-no-dkp
     steps:
     - uses: actions/checkout@v2
     - name: Build release NRO
-      run: |
-        PATH=$PATH:/root/.cargo/bin /root/.cargo/bin/cargo-skyline skyline build --release
+      run: cargo-skyline skyline build --release
       env:
         HOME: /root
     - name: Upload plugin artifact
