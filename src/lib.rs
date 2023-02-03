@@ -50,6 +50,7 @@ extern "C" {
 
 #[skyline::main(name = "results-screen")]
 pub fn main() {
+    std::thread::sleep(std::time::Duration::from_secs(20)); //makes it not crash on startup with arcrop bc ???
     println!("[results-screen] Installing hook...");
     unsafe {
         LookupSymbol(
