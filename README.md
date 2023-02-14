@@ -1,6 +1,6 @@
 # Smash Ultimate Results Screen Skip
 
-[![GitHub All Releases](https://img.shields.io/github/downloads/jugeeya/results-screen-skip/total?logo=download&style=for-the-badge)](https://github.com/jugeeya/UltimateTrainingModpack/releases)
+[![GitHub All Releases](https://img.shields.io/github/downloads/jugeeya/results-screen-skip/total?logo=download&style=for-the-badge)](https://github.com/jugeeya/results-screen-skip/releases)
 
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/jugeeya/results-screen-skip/rust_build.yml?branch=main&logo=github&style=for-the-badge)](https://github.com/jugeeya/results-screen-skip/actions)
 
